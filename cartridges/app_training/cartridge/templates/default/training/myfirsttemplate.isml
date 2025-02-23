@@ -1,0 +1,13 @@
+<html>
+
+<head>
+    <title>${Resource.msg('page.title', 'default', 'Default Title')}</title>
+</head>
+
+<body>
+    <main>
+        <h1>${pdict.myVariable}</h1>
+    </main>
+</body>
+
+</html>
