@@ -11,14 +11,23 @@
         <isset name="price" value="${product.price}" scope="page" />
         <isif condition="${product.productType === 'set'}">
             <isinclude template="product/components/pricing/setPrice" />
-        <iselse>
+        <iselse/>
             <isinclude template="product/components/pricing/main" />
+        </isif>
+
+        <isif condition="${!empty(pdict.discountPercentage)}">
+            <div class="discount-badge" role="alert"
+                aria-label="${Resource.msgf('best.deal.label', 'productTile', null, pdict.discountPercentage)}">
+                <span class="discount-percentage-label">
+                    ${Resource.msgf('best.deal.label', 'productTile', null, pdict.discountPercentage)}
+                </span>
+            </div>
         </isif>
 
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />
         </isif>
-        <div class="product-test-class">custom css class example</div>
+
     </div>
-    <!-- END_dwmarker -->
+
 </div>

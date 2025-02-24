@@ -1,0 +1,28 @@
+@import "../variables";
+
+.discount-badge {
+    padding: $space-sm $space-md;
+    border-radius: $radius-sm;
+    display: inline-block;
+    background-color: $red-1;
+    margin: $space-xs 0 $space-md 0;
+    transition:
+        background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .discount-percentage-label {
+        text-transform: uppercase;
+        font-size: $font-size-lg;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        line-height: $line-height-base;
+        color: white;
+    }
+
+    &:hover {
+        background-color: darken($red-1, 10%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+        transform: scale(1.02);
+    }
+}
