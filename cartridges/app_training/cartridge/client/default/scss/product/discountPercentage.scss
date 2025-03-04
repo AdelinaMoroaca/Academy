@@ -1,28 +1,42 @@
 @import "../variables";
 
+
 .discount-badge {
-    padding: $space-sm $space-md;
-    border-radius: $radius-sm;
-    display: inline-block;
-    background-color: $red-1;
-    margin: $space-xs 0 $space-md 0;
-    transition:
-        background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    // mobile first styling
+    font-size: $font-size-discount-badge;
+    border: 1px solid $color-discount-badge-border;
+    padding: 4px 6px;
+    border-radius: 6px;
+    background-color: $color-discount-badge-bg;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 100%;
+    transition: $transition-discount-badge;
 
     .discount-percentage-label {
         text-transform: uppercase;
-        font-size: $font-size-lg;
+        font-size: $font-size-discount-label;
         font-weight: bold;
         letter-spacing: 0.02em;
-        line-height: $line-height-base;
-        color: white;
+        line-height: 1.25;
+        color: $color-discount-badge-text;
     }
 
     &:hover {
-        background-color: darken($red-1, 10%);
+        background-color: $color-discount-badge-hover-bg;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
         transform: scale(1.02);
+    }
+
+    @media (min-width: $breakpoint-mobile-m) {
+        width: 90%;
+    }
+
+    @media (min-width: $breakpoint-tablet-s) {
+        width: 100%;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 14px;
     }
 }

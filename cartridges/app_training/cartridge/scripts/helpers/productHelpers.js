@@ -1,20 +1,17 @@
 'use strict';
 
 // Import or extend the base module if necessary
-var base = module.superModule || {};
+const base = module.superModule || {};
 
 // Function to calculate the percentage discount
-function calculatePercentageOff(standardPrice, salePrice) {
+const calculatePercentageOff = (standardPrice, salePrice) => {
     if (standardPrice === null) {
         return 0;
     }
 
-    //Check if the product has a sale price
-    let discountPercentage = Math.round(((standardPrice - salePrice) / standardPrice) * 100);
-
-    return discountPercentage;
-}
-
+    // Check if the product has a sale price
+    return Math.round(((standardPrice - salePrice) / standardPrice) * 100);
+};
 
 // Add the function to the base module
 base.calculatePercentageOff = calculatePercentageOff;

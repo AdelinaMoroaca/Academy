@@ -1,20 +1,20 @@
 "use strict";
 
-var server = require('server');
+const server = require('server');
 
 server.extend(module.superModule);
 
-var productHelpers = require('*/cartridge/scripts/helpers/productHelpers');
+const productHelpers = require('*/cartridge/scripts/helpers/productHelpers');
 
 
 server.append('Show', function (req, res, next) {
-    let viewData = res.getViewData();
+    const viewData = res.getViewData();
     let discountPercentage = null;
-    let product = viewData.product.price;
+    const product = viewData.product.price;
 
     if (product && product.sales && product.list && product.sales.decimalPrice < product.list.decimalPrice) {
-        let standardPrice = product.list.decimalPrice;
-        let salePrice = product.sales.decimalPrice;
+        const standardPrice = product.list.decimalPrice;
+        const salePrice = product.sales.decimalPrice;
         discountPercentage = productHelpers.calculatePercentageOff(standardPrice, salePrice);
 
     }
