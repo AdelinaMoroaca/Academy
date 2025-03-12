@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+  <content content-id="my-homepage-banner">
+    <display-name xml:lang="x-default">My Homepage Banner</display-name>
+    <description xml:lang="x-default">New Banner</description>
+    <online-flag>false</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;Banner2.jpg?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/p&gt;</custom-attribute>
+    </custom-attributes>
+    <folder-links>
+      <classification-link folder-id="page-includes" />
+    </folder-links>
+  </content>
+</library>

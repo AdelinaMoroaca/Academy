@@ -1,0 +1,9 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<div class="banner">
+    <iscontentasset aid="my-homepage-banner" />
+
+    <div class="banner-content">
+        <h2 id="banner-title">${Resource.msg('banner.title', 'picturesqueView', null)}</h2>
+        <p id="banner-subtitle">${Resource.msg('banner.subtitle', 'picturesqueView', null)}</p>
+    </div>
+</div>
