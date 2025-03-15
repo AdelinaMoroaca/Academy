@@ -1,0 +1,68 @@
+//mobile first styling
+.size-guide-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+        border-radius: 25px;
+
+        th {
+            background-color: #262626e7;
+            color: white;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    }
+
+    //tablet size
+    @media (min-width: 768px) {
+        table {
+            font-size: 14px;
+
+            th,
+            td {
+                padding: 12px;
+            }
+
+            tr:hover {
+                background-color: #f1f1f1cc;
+            }
+        }
+    }
+
+    //desktop size
+    @media (min-width: 1024px) {
+        table {
+            font-size: 16px;
+
+            th {
+                padding: 15px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        // justify-content: space-evenly;
+
+        h2 {
+            margin-right: 10rem;
+        }
+    }
+}
