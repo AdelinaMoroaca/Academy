@@ -1,24 +1,13 @@
-// 'use strict'
-// var server =require('server');
+'use strict'
 
-// server.get('HelloWorld', function (req, res, next) {
-//     var viewData = res.getViewData();
-//     viewData.myvariable = 32;
-//     res.setViewData(viewData);
-//     res.render("testtemplate/mytemplate", { viewData: viewData });
-//     return next();
-// });
-// module.exports = server.exports();
-
-
-var server = require('server');
-var assets = require('*/cartridge/scripts/assets.js');
+const server = require('server');
+const assets = require('*/cartridge/scripts/assets.js');
 
 server.get('Show', function (req, res, next) {
     assets.addJs('/js/productTile.js');
     assets.addCss('/css/homePage.css');
-    
-    res.render('homePage'); 
+
+    res.render('homePage');
     next();
 });
 

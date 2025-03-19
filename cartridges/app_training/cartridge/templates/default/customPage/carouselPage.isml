@@ -1,0 +1,13 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/carousel/scripts/assets.js');
+        assets.addJs('/js/pages/carousel.js');
+    </isscript>
+
+    <div class="container">
+        <div class="carousel-container" id="productCarouselContainer">
+            <isslot id="product-carousel" description="Product Carousel Slot" context="global" />
+        </div>
+    </div>
+
+</isdecorate>
