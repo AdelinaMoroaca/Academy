@@ -1,0 +1,43 @@
+<form action="${URLUtils.url('Address-SaveAddress', 'addressId', pdict.addressId)}" class="address-form" method="POST">
+    <isprint value="${pdict.addressForm.attributes}" encoding="off" />
+    <!-- Address Title -->
+    <div class="form-group ${pdict.addressForm.addressId.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="addressId">
+            <isprint value="${pdict.addressForm.addressId.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="addressId" value="${pdict.addressForm.addressId.value}" <isprint
+            value="${pdict.addressForm.addressId.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <!-- Name -->
+    <div class="row">
+        <!-- First Name -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.firstName.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="firstName">
+                    <isprint value="${pdict.addressForm.firstName.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="firstName" value="${pdict.addressForm.firstName.value}"
+                    autocomplete="given-name" <isprint value="${pdict.addressForm.firstName.attributes}"
+                    encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <!-- Last Name -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.lastName.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="lastName">
+                    <isprint value="${pdict.addressForm.lastName.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="lastName" value="${pdict.addressForm.lastName.value}"
+                    autocomplete="family-name" <isprint value="${pdict.addressForm.lastName.attributes}"
+                    encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save', 'account', null)}</button>
+
+</form>

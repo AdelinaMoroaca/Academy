@@ -1,0 +1,144 @@
+<form action="${URLUtils.url('Address-SaveAddress', 'addressId', pdict.addressId)}" class="address-form" method="POST">
+    <isprint value="${pdict.addressForm.attributes}" encoding="off" />
+    <h2>Shipping</h2>
+
+    <!-- Name -->
+    <div class="row">
+        <!-- First Name -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.firstName.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="firstName">
+                    ${Resource.msg('addressForm.firstName.label', 'addressForm', null)}
+                </label>
+                <input type="text" class="form-control" id="firstName" <isprint
+                    value="${pdict.addressForm.firstName.attributes}" encoding="off" /> autocomplete="given-name">
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <!-- Last Name -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.lastName.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="lastName">
+                    ${Resource.msg('addressForm.lastName.label', 'addressForm', null)}
+                </label>
+                <input type="text" class="form-control" id="lastName" <isprint
+                    value="${pdict.addressForm.lastName.attributes}" encoding="off" />
+                autocomplete="family-name">
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address1 Title -->
+    <div class="form-group ${pdict.addressForm.addressId.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="addressId">
+            ${Resource.msg('addressForm.addressId.label', 'addressForm', null)}
+        </label>
+        <input type="text" class="form-control" id="addressId" <isprint
+            value="${pdict.addressForm.addressId.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <!-- Address2 Title -->
+
+    <div class="form-group ${pdict.addressForm.addressId.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="addressId">
+            ${Resource.msg('addressForm.addressId.label', 'addressForm', null)}
+        </label>
+        <input type="text" class="form-control" id="addressId" <isprint
+            value="${pdict.addressForm.addressId.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <!-- Location -->
+    <div class="row">
+        <!-- Country -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.country.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="country">
+                    ${Resource.msg('addressForm.country.label', 'addressForm', null)}
+                </label>
+                <select class="form-control" id="country" name="country" <isprint
+                    value="${pdict.addressForm.country.attributes}" encoding="off">
+                    <option value="" ${empty(pdict.addressForm.country.value) ? 'selected' : ''}>Select Country
+                    </option>
+                    <option value="US">United States</option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <!-- State -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.state.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="state">
+                    ${Resource.msg('addressForm.state.label', 'addressForm', null)}
+                </label>
+                <select class="form-control" id="state" name="state" <isprint
+                    value="${pdict.addressForm.state.attributes}" encoding="off">
+                    <option value="">Select State</option>
+                    <option value="CA">California</option>
+                    <option value="NY">New York</option>
+                    <!-- Adaugă mai multe opțiuni după cum este necesar -->
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Postal Code and Number -->
+    <div class="row">
+        <!-- Postal Code -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.postalCode.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="postalCode">
+                    ${Resource.msg('addressForm.postalCode.label', 'addressForm', null)}
+                </label>
+                <input type="number" class="form-control" id="postalCode" <isprint
+                    value="${pdict.addressForm.postalCode.attributes}" encoding="off" />
+                autocomplete="postal-code">
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <!-- Number -->
+        <div class="col-6">
+            <div class="form-group ${pdict.addressForm.number.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="number">
+                    ${Resource.msg('addressForm.number.label', 'addressForm', null)}
+                </label>
+                <input type="number" class="form-control" id="number" <isprint
+                    value="${pdict.addressForm.number.attributes}" encoding="off" />
+                autocomplete="tel">
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="form-group">
+        <label class="form-control-label" for="comments">
+            ${Resource.msg('addressForm.comments.label', 'addressForm', null)}
+        </label>
+        <textarea class="form-control" id="comments" name="comments" maxlength="150" rows="3"
+            oninput="updateCharacterCount(this)"></textarea>
+        <small id="charCount" class="form-text text-muted">0/150 characters</small>
+    </div>
+
+    <!-- Submit and Scroll to Top Buttons -->
+    <div class="form-group" style="display: flex; justify-content: space-between;">
+        <button type="submit" name="save" class="btn btn-save btn-block btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" onclick="scrollToTop()">^</button>
+    </div>
+</form>
+
+
+<script>
+    function updateCharacterCount(textarea) {
+        const charCount = textarea.value.length;
+        const charCountDisplay = document.getElementById('charCount');
+        charCountDisplay.textContent = `${charCount}/150 characters`;
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
