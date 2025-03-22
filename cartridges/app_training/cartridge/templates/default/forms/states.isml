@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="state">${Resource.msg('label.input.state', 'forms', null)}</label>
+    <select id="state" name="state" required>
+        <option value="CA">${Resource.msg('select.option.state.california', 'forms', null)}</option>
+        <option value="NY">${Resource.msg('select.option.state.newyork', 'forms', null)}</option>
+        <!-- Add more states as needed -->
+    </select>
+    <span class="error">${Resource.msg('address.state.missing', 'forms', null)}</span>
+</div>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" formid="payment">   
+ <!-- <field formid="addressId" label="label.input.addressid" type="string" mandatory="true"
+    	   max-length="20" missing-error="error.message.required" range-error="error.message.20orless"/> -->
+
+    <field formid="firstName" label="label.input.firstname.profile" type="string" mandatory="true" binding="firstName"
+           max-length="50" missing-error="address.firstname.missing" range-error="error.message.50orless"/>
+
+    <field formid="lastName" label="label.input.lastname.profile" type="string" mandatory="true" binding="lastName" max-length="50"
+           missing-error="address.lastname.missing" range-error="error.message.50orless"/>
+
+    <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" max-length="50"
+           missing-error="address.address1.missing" range-error="error.message.50orless"/>
+
+    <field formid="address2" label="label.input.address2" type="string" mandatory="false" binding="address2"
+           max-length="50" range-error="error.message.50orless"/>
+
+    <!-- use set of supported countries -->
+    <field formid="country" label="label.input.country" type="string" mandatory="true" binding="countryCode"
+           missing-error="address.country.missing">
+        <options>
+            <option optionid="US" label="select.option.country.unitedstates" value="US"/>
+        </options>
+    </field>
+
+    <!-- use global state list -->
+    <include formid="states" name="states" missing-error="address.state.missing" parse-error="error.message.required" value-error="error.message.required"/>
+
+    <!--  postal code -->
+    <field formid="postalCode" label="label.input.zipcode" type="string" mandatory="true" min-length="5" max-length="10"
+           regexp="(^\d{5}(-\d{4})?$)|(^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Za-z]{1} *\d{1}[A-Za-z]{1}\d{1}$)"
+           binding="postalCode"
+           range-error="error.message.between5and10"
+           missing-error="address.zipcode.missing"
+           parse-error="error.message.parse.zip"/>
+
+    <!-- phone is mandatory for addresses -->
+    <field formid="phone" label="label.input.phonenumber" description="address.phone.example" type="string" mandatory="true"
+           binding="phone" min-length="10" max-length="20"
+           missing-error="address.phone.missing"
+           range-error="error.message.between10and20"
+           parse-error="error.message.parse.phone"/>
+
+    <!-- Comments field -->
+    <field formid="comments" label="label.input.comments" type="string" mandatory="false" max-length="150"
+           range-error="error.message.150orless"/>
+
+    <!-- Payment Specific fields -->
+       <field formid="cardNumber" label="label.input.cardnumber" type="string" mandatory="true" binding="creditCardNumber"
+           missing-error="payment.cardnumber.missing" parse-error="payment.cardnumber.invalid"/>
+
+    <field formid="expirationMonth" label="label.input.expirationmonth" type="string" mandatory="true">
+        <options>
+            <option optionid="01" label="select.option.month.01" value="1"/>
+            <option optionid="02" label="select.option.month.02" value="2"/>
+            <option optionid="03" label="select.option.month.03" value="3"/>
+            <option optionid="04" label="select.option.month.04" value="4"/>
+            <option optionid="05" label="select.option.month.05" value="5"/>
+            <option optionid="06" label="select.option.month.06" value="6"/>
+            <option optionid="07" label="select.option.month.07" value="7"/>
+            <option optionid="08" label="select.option.month.08" value="8"/>
+            <option optionid="09" label="select.option.month.09" value="9"/>
+            <option optionid="10" label="select.option.month.10" value="10"/>
+            <option optionid="11" label="select.option.month.11" value="11"/>
+            <option optionid="12" label="select.option.month.12" value="12"/>
+        </options>
+    </field>
+
+    <field formid="expirationYear" label="label.input.expirationyear" type="string" mandatory="true">
+        <options>
+            <option optionid="2025" label="select.option.year.2025" value="2025"/>
+            <option optionid="2026" label="select.option.year.2026" value="2026"/>
+            <option optionid="2027" label="select.option.year.2027" value="2027"/>
+            <option optionid="2028" label="select.option.year.2028" value="2028"/>
+            <option optionid="2029" label="select.option.year.2029" value="2029"/>
+            <option optionid="2030" label="select.option.year.2030" value="2030"/>
+        </options>
+    </field>
+
+    <field formid="securityCode" label="label.input.securitycode" type="string" mandatory="true" binding="creditCardSecurityCode"
+           max-length="4" missing-error="payment.securitycode.missing" parse-error="payment.securitycode.invalid"/>
+
+    <field formid="email" label="label.input.email" type="email" mandatory="true" binding="email"
+           max-length="50" missing-error="profile.email.missing" range-error="error.message.50orless"
+           parse-error="error.message.parse.email"/>
+
+
+    <!-- <field formid="city" label="label.input.city" type="string" mandatory="true" binding="city" min-length="2"
+           max-length="50" missing-error="address.city.missing" range-error="error.message.between2and50"/> -->
+
+    <!-- actions provided by the edit shipping address dialog -->
+    <action formid="apply" valid-form="true"/>
+    <action formid="remove" valid-form="false"/>
+</form>

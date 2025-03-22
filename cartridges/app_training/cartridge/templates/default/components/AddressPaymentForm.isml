@@ -1,0 +1,245 @@
+<form id="shippingForm" action="${URLUtils.url('AddressPayment-Submit')}" method="post">
+    <input type="hidden" name="${csrf.tokenName}" value="${csrf.token}" />
+    <h2 id="shippingTitle">${Resource.msg('shippingPaymentForm.legend', 'addressPayment_en', null)}</h2>
+
+    <div class="row">
+        <!-- First Name -->
+        <div class="col-6">
+            <div class="form-group ${pdict.form.firstName.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="firstName">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.firstname', 'addressPayment_en', null)}
+                </label>
+                <input type="text" class="form-control" id="firstName" value="${pdict.form.firstName.value}"
+                    autocomplete="given-name" <isprint value="${pdict.form.firstName.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <!-- Last Name -->
+        <div class="col-6">
+            <div class="form-group ${pdict.form.lastName.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="lastName">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.lastname', 'addressPayment_en', null)}
+                </label>
+                <input type="text" class="form-control" id="lastName" value="${pdict.form.lastName.value}"
+                    autocomplete="family-name" <isprint value="${pdict.form.lastName.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address 1 -->
+    <div class="form-group ${pdict.form.address1.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="address1">
+            <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+            ${Resource.msg('label.input.address1', 'addressPayment_en', null)}
+        </label>
+        <input type="text" class="form-control" id="address1" value="${pdict.form.address1.value}" <isprint
+            value="${pdict.form.address1.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <!-- Address 2 -->
+    <div class="form-group">
+        <label class="form-control-label" for="address2">
+            ${Resource.msg('label.input.address2', 'addressPayment_en', null)}
+        </label>
+        <input type="text" class="form-control" id="address2" value="${pdict.form.address2.value}" <isprint
+            value="${pdict.form.address2.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <!-- Country -->
+            <div class="form-group ${pdict.form.country.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="country">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.country', 'addressPayment_en', null)}
+                </label>
+                <select class="form-control" id="country" <isprint value="${pdict.form.country.attributes}"
+                    encoding="off" />>
+                <option value="US" ${pdict.form.country.value == 'US' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.country.unitedstates', 'shippingPaymentForm_en', null)}
+                </option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <!-- States -->
+            <div class="form-group ${pdict.form.states.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="states">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.state', 'addressPayment_en', null)}
+                </label>
+                <select class="form-control" id="states" <isprint value="${pdict.form.states.attributes}"
+                    encoding="off" />>
+                <!-- Options for states should be dynamically populated -->
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <!-- Postal Code -->
+            <div class="form-group ${pdict.form.postalCode.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="postalCode">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.postalcode', 'addressPayment_en', null)}
+                </label>
+                <input type="text" class="form-control" id="postalCode" value="${pdict.form.postalCode.value}" <isprint
+                    value="${pdict.form.postalCode.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+                <div>
+                    ${Resource.msg('text.example.postalcode', 'addressPayment_en', null)}
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <!-- Phone -->
+            <div class="form-group ${pdict.form.phone.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="phone">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.phonenumber', 'addressPayment_en', null)}
+                </label>
+                <input type="text" class="form-control" id="phone" value="${pdict.form.phone.value}" <isprint
+                    value="${pdict.form.phone.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+                <div>
+                    ${Resource.msg('text.example.phonenumber', 'addressPayment_en', null)}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="form-group">
+        <label class="form-control-label" for="comments">
+            ${Resource.msg('label.input.comments', 'addressPayment_en', null)}
+        </label>
+        <textarea class="form-control" id="comments" maxlength="150">${pdict.form.comments.value}</textarea>
+        <div class="invalid-feedback">${Resource.msg('error.message.150orless', 'addressPayment_en', null)}</div>
+    </div>
+
+    <h2 id="paymentTitle">${Resource.msg('paymentForm.legend', 'addressPayment_en', null)}</h2>
+
+    <!-- Card Number -->
+    <div class="form-group ${pdict.form.cardNumber.mandatory === true ? 'required' : ''}">
+        <label class="form-control-label" for="cardNumber">
+            <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+            ${Resource.msg('label.input.cardnumber', 'addressPayment_en', null)}
+        </label>
+        <input type="text" class="form-control" id="cardNumber" value="${pdict.form.cardNumber.value}" <isprint
+            value="${pdict.form.cardNumber.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <!-- Expiration Month -->
+            <div class="form-group ${pdict.form.expirationMonth.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="expirationMonth">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.expirationmonth', 'addressPayment_en', null)}
+                </label>
+                <select class="form-control" id="expirationMonth" <isprint
+                    value="${pdict.form.expirationMonth.attributes}" encoding="off" />>
+                <option value="1" ${pdict.form.expirationMonth.value == '1' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.01', 'addressPayment_en', null)}</option>
+                <option value="2" ${pdict.form.expirationMonth.value == '2' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.02', 'addressPayment_en', null)}</option>
+                <option value="3" ${pdict.form.expirationMonth.value == '3' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.03', 'addressPayment_en', null)}</option>
+                <option value="4" ${pdict.form.expirationMonth.value == '4' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.04', 'addressPayment_en', null)}</option>
+                <option value="5" ${pdict.form.expirationMonth.value == '5' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.05', 'addressPayment_en', null)}</option>
+                <option value="6" ${pdict.form.expirationMonth.value == '6' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.06', 'addressPayment_en', null)}</option>
+                <option value="7" ${pdict.form.expirationMonth.value == '7' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.07', 'addressPayment_en', null)}</option>
+                <option value="8" ${pdict.form.expirationMonth.value == '8' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.08', 'addressPayment_en', null)}</option>
+                <option value="9" ${pdict.form.expirationMonth.value == '9' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.09', 'addressPayment_en', null)}</option>
+                <option value="10" ${pdict.form.expirationMonth.value == '10' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.10', 'addressPayment_en', null)}</option>
+                <option value="11" ${pdict.form.expirationMonth.value == '11' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.11', 'addressPayment_en', null)}</option>
+                <option value="12" ${pdict.form.expirationMonth.value == '12' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.month.12', 'addressPayment_en', null)}</option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <!-- Expiration Year -->
+            <div class="form-group ${pdict.form.expirationYear.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="expirationYear">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.expirationyear', 'addressPayment_en', null)}
+                </label>
+                <select class="form-control" id="expirationYear" <isprint
+                    value="${pdict.form.expirationYear.attributes}" encoding="off" />>
+                <option value="2025" ${pdict.form.expirationYear.value == '2025' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.year.2025', 'shippingPaymentForm_en', null)}</option>
+                <option value="2026" ${pdict.form.expirationYear.value == '2026' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.year.2026', 'shippingPaymentForm_en', null)}</option>
+                <option value="2027" ${pdict.form.expirationYear.value == '2027' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.year.2027', 'shippingPaymentForm_en', null)}</option>
+                <option value="2028" ${pdict.form.expirationYear.value == '2028' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.year.2028', 'shippingPaymentForm_en', null)}</option>
+                <option value="2029" ${pdict.form.expirationYear.value == '2029' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.year.2029', 'shippingPaymentForm_en', null)}</option>
+                <option value="2030" ${pdict.form.expirationYear.value == '2030' ? 'selected' : ''}>
+                    ${Resource.msg('select.option.year.2030', 'shippingPaymentForm_en', null)}</option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <!-- Security Code -->
+            <div class="form-group ${pdict.form.securityCode.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="securityCode">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.securitycode', 'addressPayment_en', null)}
+                </label>
+                <input type="text" class="form-control" id="securityCode" value="${pdict.form.securityCode.value}"
+                    <isprint value="${pdict.form.securityCode.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <!-- Email -->
+            <div class="form-group ${pdict.form.email.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="email">
+                    <span>${Resource.msg('required.fields.indicator', 'addressPayment_en', null)}</span>
+                    ${Resource.msg('label.input.email.profile', 'addressPayment_en', null)}
+                </label>
+                <input type="email" class="form-control" id="email" value="${pdict.form.email.value}" <isprint
+                    value="${pdict.form.email.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apply and Remove Actions -->
+    <button type="submit" class="btn btn-primary" name="apply">
+        ${Resource.msg('button.save', 'addressPayment_en', null)}
+    </button>
+    <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}"
+        aria-label="${Resource.msg('button.back_to_top', 'common', null)}">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+            <i class="fa fa-arrow-up fa-stack-1x"></i>
+        </span>
+    </button>
+</form>

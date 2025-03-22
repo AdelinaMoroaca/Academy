@@ -5,6 +5,6 @@
     assets.addCss('/css/address.css'); 
     </isscript>
 
-    <isinclude template="components/ShippingPaymentForm.isml" />
+    <isinclude template="components/AddressPaymentForm" />
 
 </isdecorate>
