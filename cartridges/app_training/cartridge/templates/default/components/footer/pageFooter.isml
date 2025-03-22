@@ -1,0 +1,184 @@
+<!-- footer.isml -->
+<iscomment>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>${Resource.msg('footer.about.title', 'footer', null)}</h2>
+                <p>${Resource.msg('footer.about.description', 'footer', null)}</p>
+            </div>
+            <div class="footer-section links">
+                <h2>${Resource.msg('footer.links.title', 'footer', null)}</h2>
+                <ul>
+                    <li><a href="${URLUtils.url('Home-Show')}">${Resource.msg('footer.link.home', 'footer', null)}</a>
+                    </li>
+                    <li><a href="${URLUtils.url('Contact-Show')}">${Resource.msg('footer.link.contact', 'footer', null)}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>${Resource.msg('footer.social.title', 'footer', null)}</h2>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 YourCompany | Designed by You
+        </div>
+    </footer>
+</iscomment>
+
+<footer id="footercontent" style="padding: 0;">
+    <div class="footer-top" style="background-color:rgb(13, 91, 117); color:rgb(255, 255, 255); padding: 20px;">
+        <div class="container">
+            <h3 style="text-align:center">Footer Your Benefits Section</h3>
+            <h4 style="text-align:center">Where does it come from?</h4>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-md-3">
+                    <h5>Where does it come from?</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are gdoing to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+                        sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Where does it come from?</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+                        sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Where does it come from?</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+                        sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Where does it come from?</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+                        sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-middle" style="background-color:#66B2FF; padding: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Trusted Shops</h5>
+                    <img src="${URLUtils.staticURL('/images/trusted-shops-seal.png')}" alt="Trusted Shops"
+                        style="max-width: 150px;" />
+                </div>
+                <div class="col-md-3">
+                    <h5>Payment Methods</h5>
+                    <img src="${URLUtils.staticURL('/images/payment-methods.png')}" alt="Payment Methods"
+                        style="max-width: 200px;" />
+                </div>
+                <div class="col-md-3">
+                    <h5>Shipping Services</h5>
+                    <img src="${URLUtils.staticURL('/images/shipping-services.png')}" alt="Shipping Services"
+                        style="max-width: 200px;" />
+                </div>
+                <iscomment>
+                    <div class="col-md-3">
+                        <h5>Customer Service</h5>
+                        <p>Hotline</p>
+                        <p>Monday to Friday: 8:00 AM to 5:00 PM</p>
+                        <p>1-346-4845-52</p>
+                    </div>
+                </iscomment>
+            </div>
+            <div class="col-md-3">
+                <h5>Customer Service</h5>
+                <p>Hotline</p>
+                <p>Monday to Friday: 8:00 AM to 5:00 PM</p>
+                <p>1-346-4845-52</p>
+            </div>
+            <div class="row" style="display:flex; flex-direction: column">
+                <div class="col-md-3">
+                    <h5>About</h5>
+                    <ul style="display: flex; gap: 20px">
+                        <li><a href="${URLUtils.url('Page-Show', 'cid', 'about-us')}"
+                                style=" color: rgb(255, 255,255);">About Us</a></li>
+                        <li><a href=" ${URLUtils.url('Page-Show', 'cid', 'privacy-policy')}"
+                                style=" color: rgb(255, 255,  255);">Privacy</a></li>
+                        <li><a href=" ${URLUtils.url('Page-Show', 'cid', 'terms-conditions')}"
+                                style=" color: rgb(255, 255, 255);">Terms</a></li>
+                        <li><a href=" ${URLUtils.url('Page-Show', 'cid', 'jobs')}"
+                                style="color: rgb(255, 255, 255);">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Account</h5>
+                    <ul style="display: flex;gap: 20px;">
+                        <li><a href="${URLUtils.url('Account-Show')}" style="color: rgb(255, 255, 255);">My Account</a>
+                        </li>
+                        <li><a href="${URLUtils.url('Order-History')}" style=" color: rgb(255, 255, 255);">
+                                Check Order</a></li>
+                        <li><a href="${URLUtils.url('Wishlist-Show')} " style="color: rgb(255, 255, 255);">Wish List</a>
+                        </li>
+                        <li><a href="${URLUtils.url('GiftRegistry-Show')}" style="color: rgb(255, 255, 255);">
+                                Gift Registry</a></li>
+                    </ul>
+                </div>
+                <iscomment>
+                    <div class="col-md-3">
+                        <h5>Services &amp; Help</h5>
+                        <ul>
+                            <li><a href="${URLUtils.url('Page-Show', 'cid', 'faq')}">FAQ</a></li>
+                        </ul>
+                    </div>
+                </iscomment>
+            </div>
+        </div>
+    </div>
+
+    <iscomment>
+        <div class="footer-bottom" style="background-color: rgb(13, 91, 117); padding: 20px;">
+    </iscomment>
+    <iscomment>
+        <div class="container">
+    </iscomment>
+    <div class="row" style="background-color:rgba(238, 244, 246, 0.64); padding: 20px 200px ">
+        <div class="col-md-12">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique justo odio, eu lacinia
+                quam rutrum elementum. Quisque venenatis sem et metus facilisis ultricies. Nulla elementum
+                interdum lectus
+                in placerat. Donec in augue ante. Nunc cursus tempor nisi ac volutpat. Nulla ligula dolor,
+                aliquet eu accumsan quis, aliquet vitae felis. Praesent feugiat pretium varius. Etiam rhoncus
+                semper vestibulum.
+                Sed justo felis, maximus eu urna a, varius scelerisque dolor. Fusce dolor dui, dapibus sed
+                pharetra eu, mattis id ante. Nulla elit metus, vehicula vitae dignissim at, ullamcorper non dui.
+                Proin gravida vehicula
+                mauris sed sagittis.</p>
+        </div>
+    </div>
+    <div class="row" style="background-color:rgb(13, 91, 117); color:rgb(255, 255, 255);padding: 15px">
+        <div class="col-md-12 text-center ">
+            <p>© 2004-2018 Commerce Cloud, a Salesforce company. All Rights Reserved.</p>
+            <p>This is a demo store only. Orders made will NOT be processed.</p>
+        </div>
+    </div>
+    <iscomment>
+        </div>
+    </iscomment>
+    <iscomment>
+        </div>
+    </iscomment>
+</footer>
