@@ -1,13 +1,50 @@
 <isdecorate template="common/layout/page">
     <isscript>
-        var assets = require('*/carousel/scripts/assets.js');
-        assets.addJs('/js/pages/carousel.js');
+        var assets = require('*/cartriges/scripts/assets.js');
+      
+        assets.addJs('/js/carouselInitializer.js');
+
     </isscript>
+
+    <!-- carousel test -->
+    <iscomment>
+        <div class="container">
+            <div class="carousel-container" id="newProductCarouselContainer">
+                <div class="new-product-carousel">
+                    <!-- New product carousel items go here -->
+                    <span>new products</span>
+                    <span>new products</span>
+                    <span>new products</span>
+                    <span>new products</span>
+                </div>
+            </div>
+        </div>
+    </iscomment>
 
     <div class="container">
         <div class="carousel-container" id="productCarouselContainer">
             <isslot id="product-carousel" description="Product Carousel Slot" context="global" />
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <iscomment>
+        <script>
+        console.log(typeof jQuery !== 'undefined' ? 'jQuery is loaded' : 'jQuery is missing');
 
+        $(window).on('load', function() {
+            function carouselInitializer(className) {
+                $(document).ready(function () {
+                    $(className).slick({
+                        infinite: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    });
+                });
+            }
+
+            carouselInitializer('.new-product-carousel');
+        });
+    </script>
+    </iscomment>
 </isdecorate>
