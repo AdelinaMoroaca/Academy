@@ -1,5 +1,4 @@
 <isdecorate template="common/layout/page">
-
     <isscript>
         var assets = require('*/cartridge/scripts/assets');
         assets.addJs('/js/productDetail.js');
@@ -32,20 +31,12 @@
                 <isinclude template="product/components/imageCarousel" />
 
                 <div class="col-12 col-sm-6">
-                    <!--Breadcrumbs-->
-                    <div class="row">
-                        <div class="product-breadcrumb col hidden-sm-down">
-                            <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
-                        </div>
-                    </div>
-
                     <!-- Product Name -->
                     <div class="row">
                         <div class="col">
                             <h1 class="product-name hidden-sm-down">${product.productName}</h1>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="col">
@@ -100,6 +91,8 @@
                             </div>
                         </isif>
 
+
+
                         <!-- Product Availability -->
                         <isinclude template="product/components/productAvailability" />
 
@@ -145,7 +138,7 @@
             <!-- Size Guide Table -->
             <isinclude template="product/components/sizeGuideTable" />
 
-            <div class="recommandations">
+            <div class="recommendations">
                 <isslot id="product-recommendations-m" description="Recommended products" context="global"
                     context-object="${pdict.product.raw}" />
             </div>

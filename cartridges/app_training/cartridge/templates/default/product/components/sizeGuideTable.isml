@@ -1,5 +1,8 @@
-<isinclude template="/components/modules" sf-toolkit="off" />
-<div class="size-guide-container" id="sizeGuideTable">
-    <h2 id="size-guide-title">${Resource.msg('size.guide.title', 'sizeGuideTable', null)}</h2>
+<div class="size-guide-container">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+
+    <iscomment>
+        <h2 id="size-guide-title">${Resource.msg('size.guide.title', 'sizeGuideTable', null)}</h2>
+    </iscomment>
     <iscontentasset aid="sizeGuideTable" />
 </div>
