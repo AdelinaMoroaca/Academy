@@ -42,40 +42,44 @@
            parse-error="error.message.parse.phone"/>
 
     <!-- Comments field -->
-    <field formid="comments" label="label.input.comments" type="string" mandatory="false" max-length="150"
+    <field name="comments" formid="comments" label="label.input.comments" type="string" mandatory="false" max-length="150"
            range-error="error.message.150orless"/>
 
     <!-- Payment Specific fields -->
        <field formid="cardNumber" label="label.input.cardnumber" type="string" mandatory="true" binding="creditCardNumber"
            missing-error="payment.cardnumber.missing" parse-error="payment.cardnumber.invalid"/>
 
-    <field formid="expirationMonth" label="label.input.expirationmonth" type="string" mandatory="true">
-        <options>
-            <option optionid="01" label="select.option.month.01" value="1"/>
-            <option optionid="02" label="select.option.month.02" value="2"/>
-            <option optionid="03" label="select.option.month.03" value="3"/>
-            <option optionid="04" label="select.option.month.04" value="4"/>
-            <option optionid="05" label="select.option.month.05" value="5"/>
-            <option optionid="06" label="select.option.month.06" value="6"/>
-            <option optionid="07" label="select.option.month.07" value="7"/>
-            <option optionid="08" label="select.option.month.08" value="8"/>
-            <option optionid="09" label="select.option.month.09" value="9"/>
-            <option optionid="10" label="select.option.month.10" value="10"/>
-            <option optionid="11" label="select.option.month.11" value="11"/>
-            <option optionid="12" label="select.option.month.12" value="12"/>
-        </options>
-    </field>
+       <field formid="expirationMonth" label="label.input.expirationmonth" type="string" mandatory="true">
+       <options>
+              <option optionid="default" label="select.option.month.default" value="" selected="true"/>
+              <option optionid="01" label="select.option.month.01" value="1"/>
+              <option optionid="02" label="select.option.month.02" value="2"/>
+              <option optionid="03" label="select.option.month.03" value="3"/>
+              <option optionid="04" label="select.option.month.04" value="4"/>
+              <option optionid="05" label="select.option.month.05" value="5"/>
+              <option optionid="06" label="select.option.month.06" value="6"/>
+              <option optionid="07" label="select.option.month.07" value="7"/>
+              <option optionid="08" label="select.option.month.08" value="8"/>
+              <option optionid="09" label="select.option.month.09" value="9"/>
+              <option optionid="10" label="select.option.month.10" value="10"/>
+              <option optionid="11" label="select.option.month.11" value="11"/>
+              <option optionid="12" label="select.option.month.12" value="12"/>
+       </options>
+       </field>
 
-    <field formid="expirationYear" label="label.input.expirationyear" type="string" mandatory="true">
-        <options>
-            <option optionid="2025" label="select.option.year.2025" value="2025"/>
-            <option optionid="2026" label="select.option.year.2026" value="2026"/>
-            <option optionid="2027" label="select.option.year.2027" value="2027"/>
-            <option optionid="2028" label="select.option.year.2028" value="2028"/>
-            <option optionid="2029" label="select.option.year.2029" value="2029"/>
-            <option optionid="2030" label="select.option.year.2030" value="2030"/>
-        </options>
-    </field>
+       <field formid="expirationYear" label="label.input.expirationyear" type="string" mandatory="true">
+       <options>
+              <option optionid="default" label="select.option.year.default" value="" selected="true"/>
+              <option optionid="2018" label="select.option.year.2018" value="2018"/>
+              <option optionid="2019" label="select.option.year.2019" value="2019"/>
+              <option optionid="2020" label="select.option.year.2020" value="2020"/>
+              <option optionid="2021" label="select.option.year.2021" value="2021"/>
+              <option optionid="2022" label="select.option.year.2022" value="2022"/>
+              <option optionid="2023" label="select.option.year.2023" value="2023"/>
+              <option optionid="2024" label="select.option.year.2024" value="2024"/>
+              <option optionid="2025" label="select.option.year.2025" value="2025"/>
+       </options>
+       </field>
 
     <field formid="securityCode" label="label.input.securitycode" type="string" mandatory="true" binding="creditCardSecurityCode"
            max-length="4" missing-error="payment.securitycode.missing" parse-error="payment.securitycode.invalid"/>
