@@ -2,7 +2,7 @@
 
 const server = require('server');
 
-server.get('CustomPage', function (req, res, next) {
+server.get('Show', function (req, res, next) {
 
     res.render('customPage/customPage');
     return next();
