@@ -3,6 +3,7 @@
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/login.css');
         assets.addJs('/js/login.js');
+        assets.addJs('https://code.jquery.com/jquery-3.7.1.min.js');
     </isscript>
 
     <div class="hero slant-down login-banner">
@@ -12,33 +13,122 @@
     <div class="container login-page">
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+
+        <div class="jquery-example" style="text-align: center; margin-top: 20px;">
+            <button id="hide">Returning Customer</button>
+            <button id="show">Check your order</button>
+        </div>
+
         <div class="row justify-content-center equal-height">
             <div class="col-sm-8 col-md-6">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="login-form-nav">
-                            <isinclude template="account/components/navTabs" />
-                            <div class="tab-content">
-                                <div class="tab-pane ${pdict.navTabValue === 'login' ? 'active' : ''}" id="login"
-                                    role="tabpanel" aria-labelledby="login-tab">
-                                    <isinclude template="account/components/loginForm" />
-                                    <isinclude template="account/password/requestPasswordResetModal" />
-                                    <isinclude template="account/components/oauth" />
-                                </div>
-                                <div class="tab-pane ${pdict.navTabValue === " register" ? 'active' : ''}"
-                                    id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <isinclude template="account/components/registerForm" />
+                    <div id="track-order-form">
+                        <isinclude template="account/components/trackOrderForm" />
+                    </div>
+                    <div id="register-form" style="display: none;">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="login-form-nav">
+                                    <isinclude template="account/components/navTabs" />
+                                    <div class="tab-content">
+                                        <div class="tab-pane ${pdict.navTabValue === 'login' ? 'active' : ''}"
+                                            id="login" role="tabpanel" aria-labelledby="login-tab">
+                                            <isinclude template="account/components/loginForm" />
+                                            <isinclude template="account/password/requestPasswordResetModal" />
+                                            <isinclude template="account/components/oauth" />
+                                        </div>
+                                        <div class="tab-pane ${pdict.navTabValue === " register" ? 'active' : ''}"
+                                            id="register" role="tabpanel" aria-labelledby="register-tab">
+                                            <isinclude template="account/components/registerForm" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-md-6">
-                <div class="card">
-                    <isinclude template="account/components/trackOrderForm" />
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){          
+            $("#track-order-form").hide();
+            $("#register-form").show();
+        });
+        $("#show").click(function(){
+            $("#register-form").hide();
+            $("#track-order-form").show();
+        });
+    });
+    </script>
+</isdecorate>
+
+<iscomment>
+    <isdecorate template="common/layout/page">
+
+
+        <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+        assets.addJs('https://code.jquery.com/jquery-3.7.1.min.js');
+    </isscript>
+
+        <div class="hero slant-down login-banner">
+            <h1 class="page-title">${Resource.msg('header.hero.image.login', 'login', null)}</h1>
+        </div>
+
+        <div class="container login-page">
+            <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+
+            <div class="jquery-example" style="text-align: center; margin-top: 20px;">
+                <button id="hide">Returning Customer</button>
+                <button id="show">Check your order</button>
+                <p id="dynamic-form">Returning Customer paragraph</p>
+            </div>
+            <div class="row justify-content-center equal-height">
+                <div class="col-sm-8 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="login-form-nav">
+                                <isinclude template="account/components/navTabs" />
+                                <div class="tab-content">
+                                    <div class="tab-pane ${pdict.navTabValue === 'login' ? 'active' : ''}" id="login"
+                                        role="tabpanel" aria-labelledby="login-tab">
+                                        <isinclude template="account/components/loginForm" />
+                                        <isinclude template="account/password/requestPasswordResetModal" />
+                                        <isinclude template="account/components/oauth" />
+                                    </div>
+                                    <div class="tab-pane ${pdict.navTabValue === " register" ? 'active' : ''}"
+                                        id="register" role="tabpanel" aria-labelledby="register-tab">
+                                        <isinclude template="account/components/registerForm" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-6">
+                    <div class="card">
+                        <isinclude template="account/components/trackOrderForm" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</isdecorate>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#dynamic-form").text("Returning Customer paragraph");
+        });
+        $("#show").click(function(){
+            $("#dynamic-form").text("Check your order paragraph");
+        });
+    });
+    </script>
+    </isdecorate>
+</iscomment>
