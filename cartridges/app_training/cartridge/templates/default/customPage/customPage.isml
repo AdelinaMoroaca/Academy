@@ -1,0 +1,10 @@
+<isdecorate template="common/layout/headerOnlyLayout">
+    <!-- Your custom page content goes here -->
+    <div class="custom-page-content">
+        <h1>Welcome to the Custom Page</h1>
+        <p>This is a custom page with a header-only layout and new footer.</p>
+    </div>
+
+    <isinclude template="components/footer/pageFooter" />
+
+</isdecorate>
