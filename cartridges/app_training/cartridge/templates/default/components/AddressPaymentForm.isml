@@ -125,9 +125,11 @@
             <label class="form-control-label" for="comments">
                 ${Resource.msg('label.input.comments', 'addressPayment_en', null)}
             </label>
-            <textarea class="form-control" id="comments" maxlength="150">${pdict.form.comments.value}</textarea>
 
-            <p>You have <span id="comments-counter">150</span> characters left out of 150</p>
+            <textarea class="form-control" id="form-control" maxlength="150"
+                placeholder="Enter your comments"></textarea>
+
+            <p>You have <span id="charCounter">0</span> characters left out of 150</p>
 
             <div class="invalid-feedback">${Resource.msg('error.message.150orless', 'addressPayment_en', null)}</div>
         </div>
@@ -270,3 +272,35 @@
         </div>
     </form>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#scroll-to-top').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+    });
+
+    $(document).ready(function() {
+        const $textarea = $('#form-control');
+        const $counter = $('#charCounter');
+        const maxLength = 200;
+
+        // Initialize counter with existing text
+        $counter.text($textarea.val().length);
+
+        // Update counter on any input
+        $textarea.on('input', function() {
+            const currentLength = $(this).val().length;
+            $counter.text(currentLength);
+            
+            // Optional: Add warning styling
+            if (currentLength >= maxLength * 0.9) {
+                $counter.addClass('text-warning');
+            } else {
+                $counter.removeClass('text-warning');
+            }
+        });
+    });
+</script>
