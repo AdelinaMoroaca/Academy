@@ -1,0 +1,20 @@
+// Culori
+$color-discount-badge-bg: #e72e2e;
+$color-discount-badge-hover-bg: darken($color-discount-badge-bg, 10%);
+$color-discount-badge-text: #FFFFFF;
+$color-discount-badge-border: darken($color-discount-badge-bg, 5%);
+$color-discount-badge-border-hover: darken($color-discount-badge-bg, 20%);
+
+// Fonturi și tranziții
+$font-size-discount-badge: 10px;
+$font-size-discount-label: 1.2em;
+$transition-discount-badge: (
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+);
+
+// Breakpoint-uri
+$breakpoint-mobile-m: 425px;
+$breakpoint-tablet-s: 544px;
+$breakpoint-tablet: 768px;

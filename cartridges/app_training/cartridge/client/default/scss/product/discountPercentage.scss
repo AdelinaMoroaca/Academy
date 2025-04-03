@@ -1,0 +1,42 @@
+@import "../variables";
+
+
+.discount-badge {
+    // mobile first styling
+    font-size: $font-size-discount-badge;
+    border: 1px solid $color-discount-badge-border;
+    padding: 4px 6px;
+    border-radius: 6px;
+    background-color: $color-discount-badge-bg;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 100%;
+    transition: $transition-discount-badge;
+
+    .discount-percentage-label {
+        text-transform: uppercase;
+        font-size: $font-size-discount-label;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        line-height: 1.25;
+        color: $color-discount-badge-text;
+    }
+
+    &:hover {
+        background-color: $color-discount-badge-hover-bg;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+        transform: scale(1.02);
+    }
+
+    @media (min-width: $breakpoint-mobile-m) {
+        width: 90%;
+    }
+
+    @media (min-width: $breakpoint-tablet-s) {
+        width: 100%;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 14px;
+    }
+}
