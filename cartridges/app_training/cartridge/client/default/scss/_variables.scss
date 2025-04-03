@@ -1,0 +1,23 @@
+// Colors
+$color-cart-message-bg: #FFCC00;
+$color-cart-message-text: #FFFFFF;
+$color-cart-message-border: #edbe00;
+
+
+$color-cart-message-hover-text: #00405A;
+$color-cart-message-hover-bg: lighten($color-cart-message-bg, 30%);
+$color-cart-message-hover-border: lighten($color-cart-message-border, 10%);
+
+// Fonts and transitions
+$font-size-cart-message: 14px;
+$transition-cart-message: (
+    background-color 0.6s ease-in-out,
+    color 0.6s ease-in-out,
+    border-color 0.6s ease-in-out
+);
+// Breakpoints
+$breakpoint-mobile-s: 320px;
+$breakpoint-mobile-m: 375px;
+$breakpoint-mobile-l: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop-l: 1024px;
