@@ -1,0 +1,82 @@
+<footer id="footercontent">
+    <div class="footer-top">
+        <div class="container">
+            <h3>${Resource.msg('footer.title', 'footer', null)}</h3>
+            <h4>${Resource.msg('footer.subtitle', 'footer', null)}</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <iscontentasset aid="footerBenefitsContentSection" />
+                </div>
+                <div class="col-md-3">
+                    <iscontentasset aid="footerBenefitsContentSection" />
+                </div>
+                <div class="col-md-3">
+                    <iscontentasset aid="footerBenefitsContentSection" />
+                </div>
+                <div class="col-md-3">
+                    <iscontentasset aid="footerBenefitsContentSection" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <iscontentasset aid="footerTrustedShopsContent" />
+                </div>
+                <div class="col-md-3">
+                    <iscontentasset aid="footerPaymentMethodsContent" />
+                </div>
+                <div class="col-md-3">
+                    <iscontentasset aid="footerShippingServicesContent" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-middle links">
+        <div class="row" id="footer-customer-service">
+            <div class="col-md-3">
+                <h5>${Resource.msg('footer.customerService', 'footer', null)}</h5>
+            </div>
+            <div class="col-md-3 footer-hotline">
+                <h5>${Resource.msg('footer.hotline', 'footer', null)}</h5>
+                <p>${Resource.msg('footer.hotlineHours', 'footer', null)}</p>
+                <p>${Resource.msg('footer.hotlineTime', 'footer', null)}</p>
+                <p>${Resource.msg('footer.hotlineNumber', 'footer', null)}</p>
+            </div>
+            <div class="col-md-3">
+                <h5>${Resource.msg('footer.servicesHelp', 'footer', null)}</h5>
+                <p>${Resource.msg('footer.faq', 'footer', null)}</p>
+            </div>
+        </div>
+        <div class="row" id="footer-about-account">
+            <div class="col-md-9">
+                <h5>${Resource.msg('footer.about', 'footer', null)}</h5>
+                <ul>
+                    <li><a href="${URLUtils.url('Page-Show', 'cid', 'about-us')}">${Resource.msg('footer.aboutUs', 'footer', null)}</a></li>
+                    <li><a href="${URLUtils.url('Page-Show', 'cid', 'privacy-policy')}">${Resource.msg('footer.privacy', 'footer', null)}</a></li>
+                    <li><a href="${URLUtils.url('Page-Show', 'cid', 'terms-conditions')}">${Resource.msg('footer.terms', 'footer', null)}</a></li>
+                    <li><a href="${URLUtils.url('Page-Show', 'cid', 'jobs')}">${Resource.msg('footer.jobs', 'footer', null)}</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <h5>${Resource.msg('footer.account', 'footer', null)}</h5>
+                <ul>
+                    <li><a href="${URLUtils.url('Account-Show')}">${Resource.msg('footer.myAccount', 'footer', null)}</a></li>
+                    <li><a href="${URLUtils.url('Order-History')}">${Resource.msg('footer.checkOrder', 'footer', null)}</a></li>
+                    <li><a href="${URLUtils.url('Wishlist-Show')}">${Resource.msg('footer.wishList', 'footer', null)}</a></li>
+                    <li><a href="${URLUtils.url('GiftRegistry-Show')}">${Resource.msg('footer.giftRegistry', 'footer', null)}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row footer-bottom-text">
+        <p>${Resource.msg('footer.bottomText', 'footer', null)}</p>
+    </div>
+    <div class="row footer-bottom-copyright">
+        <p>${Resource.msg('footer.copyright', 'footer', null)}</p>
+        <p>${Resource.msg('footer.demoNotice', 'footer', null)}</p>
+    </div>
+</footer>
