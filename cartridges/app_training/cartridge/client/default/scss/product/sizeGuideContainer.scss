@@ -1,0 +1,66 @@
+// Mobile-first styling
+.size-guide-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    h2 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.75rem;
+
+        th {
+            background-color: rgba(38, 38, 38, 0.9);
+            color: #f9f9f9;
+        }
+
+        th,
+        td {
+            padding: 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    }
+
+    //tablet size
+    @media (min-width: 769px) {
+        display: flex;
+        flex-direction: row;
+
+        .content-asset {
+            display: flex;
+            gap: 15%;
+            width: 100%;
+
+            h2 {
+                white-space: nowrap;
+                margin-bottom: 0;
+                font-size: 1.8rem;
+            }
+
+            table {
+                font-size: 16px;
+
+                th,
+                td {
+                    padding: 0.9rem;
+                }
+
+                tr:hover {
+                    background-color: rgba(241, 241, 241, 0.8);
+                }
+            }
+        }
+    }
+}

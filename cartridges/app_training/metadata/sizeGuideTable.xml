@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+  <content content-id="sizeGuideTable">
+    <display-name xml:lang="x-default">Size Guide Table</display-name>
+    <description xml:lang="x-default">Size Guide Table</description>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Size Guide&lt;/h2&gt;&#13;&lt;table border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; &gt;&#13;    &lt;thead&gt;&#13;        &lt;tr&gt;&#13;            &lt;th&gt;Tops (Chest)&lt;/th&gt;&#13;            &lt;th&gt;XS&lt;/th&gt;&#13;            &lt;th&gt;S&lt;/th&gt;&#13;            &lt;th&gt;M&lt;/th&gt;&#13;            &lt;th&gt;L&lt;/th&gt;&#13;            &lt;th&gt;XL&lt;/th&gt;&#13;            &lt;th&gt;XXL&lt;/th&gt;&#13;        &lt;/tr&gt;&#13;    &lt;/thead&gt;&#13;    &lt;tbody&gt;&#13;  &lt;tr&gt;&#13;            &lt;td&gt;Adidas&lt;/td&gt;&#13;            &lt;td&gt;31-33&quot;&lt;/td&gt;&#13;            &lt;td&gt;34-37&quot;&lt;/td&gt;&#13;            &lt;td&gt;37-40&quot;&lt;/td&gt;&#13;            &lt;td&gt;40-44&quot;&lt;/td&gt;&#13;            &lt;td&gt;44-48&quot;&lt;/td&gt;&#13;            &lt;td&gt;48-52&quot;&lt;/td&gt;&#13;        &lt;/tr&gt;&#13;        &lt;tr&gt;&#13;            &lt;td&gt;Canterbury&lt;/td&gt;&#13;            &lt;td&gt;-&lt;/td&gt;&#13;            &lt;td&gt;37-39&quot;&lt;/td&gt;&#13;            &lt;td&gt;39-41&quot;&lt;/td&gt;&#13;            &lt;td&gt;41-43&quot;&lt;/td&gt;&#13;            &lt;td&gt;43-45&quot;&lt;/td&gt;&#13;            &lt;td&gt;46-48&quot;&lt;/td&gt;&#13;        &lt;/tr&gt;&#13;        &lt;tr&gt;&#13;            &lt;td&gt;New Balance&lt;/td&gt;&#13;            &lt;td&gt;-&lt;/td&gt;&#13;            &lt;td&gt;37-39&quot;&lt;/td&gt;&#13;            &lt;td&gt;39-41&quot;&lt;/td&gt;&#13;            &lt;td&gt;41-43&quot;&lt;/td&gt;&#13;            &lt;td&gt;45-47&quot;&lt;/td&gt;&#13;            &lt;td&gt;49-51&quot;&lt;/td&gt;&#13;        &lt;/tr&gt;&#13;        &lt;tr&gt;&#13;            &lt;td&gt;Nike&lt;/td&gt;&#13;            &lt;td&gt;-&lt;/td&gt;&#13;            &lt;td&gt;35-38&quot;&lt;/td&gt;&#13;            &lt;td&gt;38-41&quot;&lt;/td&gt;&#13;            &lt;td&gt;41-44&quot;&lt;/td&gt;&#13;            &lt;td&gt;44-49&quot;&lt;/td&gt;&#13;            &lt;td&gt;49-54&quot;&lt;/td&gt;&#13;        &lt;/tr&gt;&#13;    &lt;/tbody&gt;&#13;&lt;/table&gt;</custom-attribute>
+    </custom-attributes>
+    <folder-links>
+      <classification-link folder-id="page-includes" />
+    </folder-links>
+  </content>
+</library>
