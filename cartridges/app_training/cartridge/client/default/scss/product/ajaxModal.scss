@@ -1,0 +1,37 @@
+.ajax-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem;
+    box-sizing: border-box;
+
+    #ajaxButton {
+        border-radius: 0 25px 25px 0;
+        padding: 0.6rem;
+        cursor: pointer;
+        white-space: nowrap;
+        background-color: rgb(0, 161, 224);
+        color: white;
+    }
+
+    #ajaxInput {
+        border-radius: 25px 0 0 25px;
+        border: 3px solid rgb(0, 161, 224);
+        padding: 0.5rem;
+    }
+
+    #ajaxInput:focus {
+        outline: none;
+    }
+
+    .modal-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ajax-input-value {
+            color: rgb(0, 161, 224);
+            font-size: larger;
+        }
+    }
+}

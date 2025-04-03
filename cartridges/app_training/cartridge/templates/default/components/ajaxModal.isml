@@ -1,0 +1,48 @@
+<div class="ajax-modal-container">
+    <input type="search" id="ajaxInput" name="ajaxInput" value=""
+        aria-label="${Resource.msg('label.inputForAjaxModal', 'ajaxModal', null)}"
+        placeholder="${Resource.msg('label.inputForAjaxModal', 'ajaxModal', null)}">
+    <button id="ajaxButton" class="btn btn-primary">
+        <i class="minicart-icon fa fa-shopping-bag"></i>
+        ${Resource.msg('button.open', 'ajaxModal', null)}
+    </button>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ajaxModalLabel">${Resource.msg('modal.title', 'ajaxModal', null)}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">${Resource.msg('button.closeSymbol', 'ajaxModal', null)}</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>${Resource.msg('modal.bodyText', 'ajaxModal', null)} <span class="ajax-input-value"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#ajaxButton').on('click', function() {
+            const inputValue = $('#ajaxInput').val();
+            // Set the input value into the specific span within the modal's body
+            $('#ajaxModal .ajax-input-value').text(inputValue);
+            // Show the modal
+            $('#ajaxModal').modal('show');
+        });
+
+        $('#ajaxModal').on('shown.bs.modal', function() {
+            console.log('Modal is fully shown.');
+        });
+    });
+</script>
