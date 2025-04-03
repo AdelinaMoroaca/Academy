@@ -19,5 +19,4 @@ test/appium/webdriver/config.json
 test/acceptance/report
 test/integration/config.json
 
-
 .vscode/
