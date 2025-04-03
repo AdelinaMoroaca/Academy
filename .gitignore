@@ -21,3 +21,5 @@ test/integration/config.json
 
 metadata/*
 !metadata/meta/
+
+.vscode/
