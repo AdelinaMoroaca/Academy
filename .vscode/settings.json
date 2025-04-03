@@ -6,5 +6,6 @@
         "omsSearchEnabled": false,
         "composableEnabled": false,
         "sfccEnabled": false
-    }
+    },
+    "extension.prophet.sitecontext.selectedSiteID": "dw.json"
 }

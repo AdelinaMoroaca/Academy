@@ -6,7 +6,32 @@
     font-weight: 200;
 }
 
-.product-test-class {
-    font-size: 1em;
-    color: red;
+//Mobile first styling
+.recommandations {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-top: 1.6rem;
+
+    .product {
+        height: 100%;
+
+        .price,
+        .tile-body-footer {
+            white-space: nowrap;
+        }
+
+        .product-test-class {
+            display: block;
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (min-width: 426px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 769px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
