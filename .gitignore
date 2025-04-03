@@ -1,6 +1,6 @@
 node_modules/
 cartridges/*/cartridge/static/
-.vscode/
+.vscode/*
 coverage/
 npm-debug.log
 cartridges.zip
