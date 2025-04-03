@@ -1,0 +1,10 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/address.js'); 
+    assets.addCss('/css/address.css'); 
+    </isscript>
+
+    <isinclude template="components/AddressForm" />
+
+</isdecorate>

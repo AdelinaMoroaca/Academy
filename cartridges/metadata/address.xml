@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.demandware.com/xml/form/1.0">
+    <form-definition name="address">
+        <form-group name="addressInfo">
+            <form-field name="addressId" type="string" mandatory="true">
+                <label>Address ID</label>
+                <description>The unique identifier for the address.</description>
+            </form-field>
+            <form-field name="firstName" type="string" mandatory="true">
+                <label>First Name</label>
+                <description>The first name of the person.</description>
+            </form-field>
+            <form-field name="lastName" type="string" mandatory="true">
+                <label>Last Name</label>
+                <description>The last name of the person.</description>
+            </form-field>
+        </form-group>
+    </form-definition>
+</form>
