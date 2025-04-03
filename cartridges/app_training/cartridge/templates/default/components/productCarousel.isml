@@ -1,0 +1,71 @@
+<div class="carousel-container">
+    <isslot id="product-carousel" description="Product Carousel Slot" context="global" />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<iscomment>
+    <link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('css/slick.css')}" />
+    <link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('css/slick-theme.css')}" />
+    <link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('css/productCarousel.css')}" />
+
+    <script type="text/javascript" src="${URLUtils.staticURL('js/jquery.min.js')}"></script>
+    <script type="text/javascript" src="${URLUtils.staticURL('js/slick.min.js')}"></script>
+
+    <div class="your-carousel-class">
+        <isloop items="${ProductList}" var="product">
+            <div class="product-item">
+                <h3>${product.name}</h3>
+                <img src="${product.imageURL}" alt="${product.name}" />
+            </div>
+        </isloop>
+    </div>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.your-carousel-class').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+</iscomment>
